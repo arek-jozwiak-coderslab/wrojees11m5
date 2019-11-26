@@ -1,4 +1,4 @@
-package pl.coderslab.lambda;
+package pl.coderslab.streams;
 
 import java.time.LocalDate;
 
