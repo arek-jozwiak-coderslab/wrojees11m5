@@ -1,23 +1,71 @@
 package pl.coderslab.lambda;
 
-public class Employee implements Comparable<Employee>{
-    private int age;
+import java.time.LocalDate;
 
-    public Employee(int age) {
-        this.age = age;
-    }
+public class Employee {
 
-    public int getAge() {
-        return age;
-    }
+    private String firstName;
+    private String lastName;
+    private LocalDate dayOfBirth;
+    private Double salary;
+    private char sex;
 
-    public void setAge(int age) {
-        this.age = age;
+    public Employee(String firstName, String lastName, LocalDate dayOfBirth, Double salary, char sex) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dayOfBirth = dayOfBirth;
+        this.salary = salary;
+        this.sex = sex;
     }
 
     @Override
-    public int compareTo(Employee employee) {
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dayOfBirth=" + dayOfBirth +
+                ", salary=" + salary +
+                ", sex=" + sex +
+                '}';
+    }
 
-        return 0;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public LocalDate getDayOfBirth() {
+        return dayOfBirth;
+    }
+
+    public void setDayOfBirth(LocalDate dayOfBirth) {
+        this.dayOfBirth = dayOfBirth;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
     }
 }

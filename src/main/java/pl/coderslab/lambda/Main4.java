@@ -12,6 +12,9 @@ public class Main4 {
             return false;
         };
 
+
+
+
         isString.test(123);
         isString.test("asd");
     }
